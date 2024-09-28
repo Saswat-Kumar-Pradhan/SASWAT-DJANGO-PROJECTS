@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.sqlite3
+
+# Local development settings
+.env
+.env.*
+
+# IDE-specific files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+
+# Static and media files (if using them in your project)
+staticfiles/
+media/
+
+# Migrations
+**/migrations/
+
+# Node modules (if using npm or yarn in your project)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# macOS files
+.DS_Store
