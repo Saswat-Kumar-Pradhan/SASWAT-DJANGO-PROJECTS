@@ -50,6 +50,14 @@ def loginView(request):
     }, status=status.HTTP_200_OK)
 
 
+def decode_jwt(token):
+    try:
+        payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+        return payload
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidTokenError:
+        return None
 
 
 class ProfileViewSet(viewsets.ModelViewSet):

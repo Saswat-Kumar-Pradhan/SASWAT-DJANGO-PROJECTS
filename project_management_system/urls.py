@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import ProfileViewSet, ProjectViewSet, CollaboratorViewSet, GitRepoViewSet, HostLinksViewSet, ToDoViewSet
+from .views import loginView, ProfileViewSet, ProjectViewSet, CollaboratorViewSet, GitRepoViewSet, HostLinksViewSet, ToDoViewSet
 
 # Initialize the DefaultRouter
 router = DefaultRouter()
@@ -15,6 +15,6 @@ router.register(r'todos', ToDoViewSet)
 
 # Include router urls
 urlpatterns = [
-    path('loginView/', LoginView.as_view(), name='login'),
+    path('login/', loginView, name='login'),
     path('', include(router.urls)),
 ]
